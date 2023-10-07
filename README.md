@@ -5,7 +5,11 @@ Use an calculator for your Termux App, try Calculator now!
 <img src="images/img2.jpg">
 
 ## Installation:
-Firstly, install git using this command.
+Download termux in their website
+
+<a href="https://termux.dev">Termux Websiye</a>
+
+Next, install git on termux using this command.
 
 ```pkg install git```
 
