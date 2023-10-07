@@ -1,0 +1,109 @@
+#!/bin/bash
+# File : main
+# Author : ruihq <ruihq.gh@gmail.com>
+# License : MIT License
+
+# Plus function
+function plus() {
+    sleep 0.5
+    clear
+    echo Plus v1 by ruihq
+    echo
+    echo First number: 
+    read firstNum
+    
+    echo
+    echo Second number: 
+    read secondNum
+    
+    result=$(($firstNum + $secondNum))
+    echo
+    echo "The answer is: $result"
+}
+
+# Minus function
+function minus() {
+    sleep 0.5
+    clear
+    echo Minus v1 by ruihq
+    echo
+    echo First number: 
+    read firstNum
+    
+    echo
+    echo Second number: 
+    read secondNum
+    
+    result=$(($firstNum - $secondNum))
+    echo
+    echo "The answer is: $result"
+}
+
+# Times function
+function times() {
+    sleep 0.5
+    clear
+    echo Times v1 by ruihq
+    echo
+    echo First number: 
+    read firstNum
+    
+    echo
+    echo Second number: 
+    read secondNum
+    
+    result=$(($firstNum * $secondNum))
+    echo
+    echo "The answer is: $result"
+}
+
+# Divide function
+function divide() {
+    sleep 0.5
+    clear
+    echo Divide v1 by ruihq
+    echo
+    echo First number: 
+    read firstNum
+    
+    echo
+    echo Second number: 
+    read secondNum
+    
+    result=$(($firstNum / $secondNum))
+    echo
+    echo "The answer is: $result"
+}
+
+# Main function
+function main() {
+    echo Calculator v1 by ruihq
+    echo
+    echo "[1]: Plus +"
+    echo "[2]: Minus -"
+    echo "[3]: Times *"
+    echo "[4]: Divide /"
+    echo
+    read ans
+    
+    if [ $ans == "1" ]
+    then
+        plus
+    elif [ $ans == "2" ]
+    then
+        minus
+    elif [ $ans == "3" ]
+    then
+        times
+    elif [ $ans == "4" ]
+    then
+        divide
+    else
+        echo Invalid answer, retry.
+        sleep 0.5
+        clear
+        main
+    fi
+}
+
+main
